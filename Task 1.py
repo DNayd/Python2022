@@ -1,4 +1,5 @@
 from Bio import SeqIO
-sequence = SeqIO.parse(open('/Users/dnayd/Documents/Python/pythonProject2022/sequences.fasta'), 'fasta')
+seqs = input('Введите имя .fasta файла: ')
+sequence = SeqIO.parse(open(seqs), 'fasta')
 for feature in sequence:
     print(f'id:{feature.id} name:{feature.name}\nseqs {feature.seq}')
